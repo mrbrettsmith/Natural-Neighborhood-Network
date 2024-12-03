@@ -1,0 +1,530 @@
+:root{
+    --natural: #ED1C24;
+    --rain: #3572B9;
+    --pollen: #DCCC3C;
+    --prairie: #F47534;
+    --seed: #A35FA6;
+    --forest: #6BA95C;
+    --black: #000000;
+    --white: #ffffff;
+    --logoW: clamp(1.75rem, 8vw, 3rem);
+    --logoH: 83%;
+    --itemW: clamp(1rem, 3vw, 1.25rem);
+    --itemH: 90%;
+}
+
+/* UNIVERSAL */
+
+body {
+    margin: 0em;
+}
+.wrap {
+    margin: 4em;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.arrowTextContainer {
+display: flex;
+    h3 { margin-right: 0.3rem;
+        
+    }
+}
+
+.downArrow {
+width: 1em;
+flex: 0 0 auto;
+}
+
+.dropdown-projects {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100%;
+    z-index: 5;
+  }
+
+  .dropdown-projects a, .dropdown-burger a {
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-projects {display: block;} 
+
+
+/* STYLE */
+
+a {
+    color: var(--black);
+    text-decoration: none;
+    
+    &:hover {
+        color: var(--natural);
+        fill: var(--natural);
+    }
+}  
+
+/* PUZZLE STYLE CLASSES */
+
+.natural {
+    color: var(--natural);
+    fill: var(--natural);
+}
+
+.rain {
+    color: var(--rain);
+    fill: var(--rain);
+}
+
+.pollen {
+    color: var(--pollen);
+    fill: var(--pollen);
+}
+
+.prairie {
+    color: var(--prairie);
+    fill: var(--prairie);
+}
+
+.forest {
+    color: var(--forest);
+    fill: var(--forest);
+}
+
+.seed {
+    color: var(--seed);
+    fill: var(--seed);
+}
+
+/* TYPE */
+
+/* H1 for title */
+h1 {
+    font-family: 'proxima-soft';
+    font-weight: 800;
+    font-size: var(--logoW);
+    line-height: var(--logoH);
+    width: min-content;
+    margin: .5rem;
+}
+
+/* H2 for article headers */
+h2 {
+    font-family: 'proxima-soft';
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 1.8rem;
+}
+
+/* H3 for buttons, nav, etc. */
+h3 {
+    font-family: 'proxima-soft';
+    font-weight: 600;
+    font-size: var(--itemW);
+    line-height: var(--itemH);
+    width: min-content;
+    margin: 1rem;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    flex-flow:wrap;
+    z-index: 10;
+    margin-top: 15%;
+    padding: 0 0 1em 0;
+
+    /* Following not necisarry with nav 'flex-flow: wrap'
+    justify-content: space-between;
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    */
+}
+
+/* UNIVERSAL STICKY */
+/* This happens when sticky isnt triggered */
+#stickyNavBar:not(.sticky) {
+    position: relative;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.primary {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    flex: 1 1 35%;
+    background-color: var(--white);
+    padding: 2em 0 1em 0;
+}
+
+.logoContainer {
+    display: flex;
+}
+
+.logo {
+    color: var(--natural);
+    &:hover {
+        color: var(--black);
+    }
+    /* flex: auto;
+    width: fit-content; */
+}
+
+.nav-items {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 40%;
+    background-color: var(--white);
+}
+
+/* HIDDEN DROPDOWN */
+
+.hidden {
+    position: relative;
+    display: none;
+    flex: auto;
+    /* height: 2em; */
+    margin: auto;
+
+}
+
+.hidden-dropdown {
+    position: relative;
+    flex: auto;
+    width: 2.5em;
+    margin: auto 0px auto auto;
+    height: 1.5em;
+    svg {
+        height: 1.5em;
+        width: 1.5em;
+    }
+}
+
+.dropdown-burger {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: min-content;
+    z-index: 1;
+    right: 0;
+  }
+
+.hidden-dropdown:hover .dropdown-burger {display: block;} 
+
+
+/* Body */
+
+.impactContainer {
+    position: absolute;
+}
+
+.impact-quote {
+    /* width: 75% - 2em;*/
+    margin: 25% 4em 30% 20%; 
+    /* left: 35%;
+    width: min(100vh, 65%);
+    margin-top: 25%;
+    margin-bottom: 30%; */
+    /* position: absolute; */
+    
+    p {
+        font-family: 'proxima-soft';
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+}
+
+/* Hidden elements for Puzzle */
+
+.hiddenRow {
+display: flex;
+flex: 1 1 100%;
+
+}
+
+.ghostArticle {
+    margin-left: 3em;
+    flex: 1 1 65%;
+    margin-right: auto;
+}
+
+
+.whiteoutBackground {
+
+}
+
+/* Make Active when Fixed - has wront width*/
+.fixed-puzzle-container { 
+
+    /* display: flex; */
+    margin: 0;
+
+}
+
+.ImageFix {
+display: block;
+}
+
+.body-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.gardenCard {
+    display: flex;
+    padding: 12.5em 0 2em 0;
+    flex: auto;
+}
+
+.puzzle-container {
+    display: flex;
+    height: fit-content;
+    justify-content: flex-end;
+    /* This flex messes things up?, not sure why. not necissary */
+    flex: auto;
+}
+
+.dualPuzzleContainer {
+    display: inline-flex;
+}
+
+.dualHiddenContainer {
+    display: flex;
+    padding-right: .5em;
+}
+
+.puzzle-piece {
+    flex-basis: auto;
+    position:relative;
+    /* max-width: 7em; */
+    min-width: 4em; 
+    z-index: 1;
+    padding: .2em;
+}
+
+.addRightPadding {
+    padding-right: 1em;
+}
+.addHalfRightPadding {
+    padding-right: auto;
+}
+
+.halfStep {
+
+}
+
+.fullStep {
+
+}
+
+.article-container {
+    margin-left: 3em;
+    display: inline-flex;
+    text-align: left; 
+    flex: 1 1 65%;
+    justify-content: end;
+}
+
+.article-head-container {
+   /* min-width: 11em; */
+   flex: 1 1 20%;
+}
+
+.article-head {
+    max-width: min-content;
+    margin: 0 auto 0 auto; 
+    padding-right: 1rem;
+}
+
+.article-body {
+    flex: 1 1 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17em;
+    p {color: #000000;}
+}
+
+.article-body img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.article-p {
+    font-family: 'apparat';
+    margin: 0;
+    padding-bottom: 1em;
+}
+
+.article-img {
+    background-color: green;
+    max-width: 600px;
+    height: 600px;
+}
+
+.title-img {
+    display: none;
+}
+
+
+.footer {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: auto;
+}
+
+.footer-container {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    p {
+        font-family: 'apparat';
+        line-height: 1rem;
+        margin: .2rem 1rem;
+        width: min-content;
+    }
+    h3 {
+        margin: .2rem 1rem;
+    }
+}
+
+
+/* MEDIA */
+
+/* desktop */
+@media only screen
+and (min-width : 1200) {
+
+
+}
+
+/* tablet landscape */
+@media screen and (min-width: 1044px) and (max-width: 1600px)  {
+
+}
+
+/* tablet portrait */
+@media screen and (min-width: 900px) and (max-width: 1044px)  {
+    .gardenCard {
+        padding: 18em 0 2em 0;
+    }
+}
+
+/* smartphone landscape */
+@media screen and (min-width: 480px) and (max-width: 900px)  {
+
+    /* .nav-items {
+        display: none;
+    } */
+
+    .impact-quote {
+        margin: 45% 4em 30% 20%; 
+    }
+    
+    .hidden {
+        display: none;
+    }
+
+    .article-container {
+        display: inline-block;
+    }
+
+    .article-head {
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+
+    .article-head-container {
+    margin: auto;
+    }
+
+    .article-body {
+        margin-bottom: 5rem;
+    }
+}
+
+/* smartphone portrait */
+@media screen and (max-width: 479px) {
+
+    .wrap {
+        margin: 3rem;
+    }
+
+    .nav-items {
+        display: none;}
+
+    .hidden {
+        display: inline-block;
+    }
+
+    .body-container {
+        display: block;
+    }
+        
+    .impact-quote {
+        display: none;
+        p {
+            font-family: 'proxima-soft';
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    .gardenCard {
+        padding: 3em 0 2em 0;
+    }
+    
+    .article-container {
+        margin-left: auto;
+        display: inline-flex;
+        flex-direction: column;
+        text-align: left; 
+    }
+
+    .article-head-container {
+        display: inline-flex;
+        justify-content: space-around;
+        flex: auto;
+        margin-bottom: 1em;
+    }
+
+    .article-head {
+        /* This is breaxing fitting margin: 0 0 100% 0; */
+        max-width: min-content;
+        margin: 0 auto 0 .5em; 
+    }
+
+    .article-body {
+        margin-bottom: 0em;
+    }
+
+    .puzzle-container {
+        display: none;}
+
+    .title-img {
+        display: flex;
+    }
+}
+
+
